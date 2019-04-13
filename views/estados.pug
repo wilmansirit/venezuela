@@ -1,0 +1,7 @@
+extends layout
+
+block content
+  h1 Estados de Venezuela
+  
+  each estado in estados
+    p #{estado.estado} - #{estado.iso_3166_2}
