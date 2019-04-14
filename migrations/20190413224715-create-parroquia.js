@@ -15,14 +15,6 @@ module.exports = {
       parroquia: {
         type: Sequelize.STRING
       },
-      municipio_id: {
-        type      : Sequelize.INTEGER,
-        onDelete  : 'CASCADE',
-        references: {
-          model   : 'municipios',
-          key     : 'id'
-        }
-      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

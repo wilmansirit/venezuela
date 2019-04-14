@@ -17,14 +17,6 @@ module.exports = {
       capital       : {
         type        : Sequelize.BOOLEAN
       },
-      estado_id     : {
-        type        : Sequelize.INTEGER,
-        onDelete    : 'CASCADE',
-        references  : {
-          model     : 'estados',
-          key       : 'id'
-        }
-      },
       createdAt     : {
         allowNull   : false,
         type        : Sequelize.DATE

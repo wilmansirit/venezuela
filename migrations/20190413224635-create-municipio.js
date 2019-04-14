@@ -15,22 +15,6 @@ module.exports = {
       municipio: {
         type        : Sequelize.STRING
       },
-      estado_id : {
-        type        : Sequelize.INTEGER,
-        onDelete    : 'CASCADE',
-        references  : {
-          model     : 'estados',
-          key       : 'id'
-        }
-      },
-      ciudad_id : {
-        type        : Sequelize.INTEGER,
-        onDelete    : 'CASCADE',
-        references  : {
-          model     : 'ciudades',
-          key       : 'id'
-        }
-      },
       createdAt: {
         allowNull   : false,
         type        : Sequelize.DATE
