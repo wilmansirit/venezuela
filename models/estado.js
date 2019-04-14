@@ -3,7 +3,7 @@
 module.exports = (sequelize, DataTypes) => {
 
   const Estado = sequelize.define('Estado', {
-
+    
     estado: DataTypes.STRING,
     iso_3166_2: DataTypes.STRING
 
