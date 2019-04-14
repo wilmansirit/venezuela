@@ -29,6 +29,13 @@ module.exports = (sequelize, DataTypes) => {
 
     });
 
+    Municipio.belongsTo(models.Ciudad, {
+
+      foreignKey  : 'ciudad_id',
+      onDelete    : 'CASCADE'
+      
+    })
+
   };
 
   return Municipio;

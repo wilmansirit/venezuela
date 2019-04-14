@@ -3,5 +3,18 @@ extends layout
 block content
   h1 Estados de Venezuela
   
-  each estado in estados
-    p #{estado.estado} - #{estado.iso_3166_2}
+  table(id="estados" class="display" style="width:80%")
+    thead
+      tr
+        th ID
+        th Estado
+        th iso
+
+    tbody
+      each estado in estados
+        tr
+          td #{estado.id}
+          td #{estado.estado}
+          td #{estado.iso_3166_2}
+
+  a(href="/") Volver

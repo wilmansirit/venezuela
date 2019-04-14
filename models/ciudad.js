@@ -16,6 +16,13 @@ module.exports = (sequelize, DataTypes) => {
 
   Ciudad.associate = function(models) {
 
+    Ciudad.hasMany(models.Municipio, {
+
+      foreignKey  : 'ciudad_id',
+      onDelete    : 'SET NULL'
+
+    })
+
     Ciudad.belongsTo(models.Estado, {
 
       foreignKey  :   'estado_id',

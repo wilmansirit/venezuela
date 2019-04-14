@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  h1 Ciudades de Venezuela
+  
+  hr
+
+  table(id="ciudades" class="display" style="width:80%")
+    thead
+      tr
+        th ID
+        th Ciudad
+        th Estado
+
+    tbody
+      each ciudad in ciudades
+        tr
+          td #{ciudad.id}
+          td #{ciudad.ciudad}
+          td #{ciudad.Estado.estado}
+
+
+  a(href="/") Volver
