@@ -1,21 +1,25 @@
 'use strict';
+
 module.exports = {
+
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('Contexts', {
+
+    return queryInterface.createTable('parroquias', {
+
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      name: {
+      parroquia: {
         type: Sequelize.STRING
       },
-      UserId: {
+      municipio_id: {
         type      : Sequelize.INTEGER,
         onDelete  : 'CASCADE',
         references: {
-          model   : 'Users',
+          model   : 'municipios',
           key     : 'id'
         }
       },
@@ -30,6 +34,8 @@ module.exports = {
     });
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('Contexts');
+
+    return queryInterface.dropTable('parroquias');
+
   }
 };
