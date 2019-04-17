@@ -18,7 +18,8 @@ module.exports = (sequelize, DataTypes) => {
     Parroquia.belongsTo(models.Municipio, {
 
       foreignKey  : 'municipio_id',
-      onDelete    : 'CASCADE'
+      onDelete    : 'SET NULL',
+      onUpdate    : 'CASCADE'
 
     });
 
